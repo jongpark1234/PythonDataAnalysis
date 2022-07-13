@@ -74,3 +74,9 @@ df['2010-2015증가율'] *= 100
 print(df)
 
 del df['2010-2015증가율'] # 삭제
+
+print(df)
+
+df.insert(1, 'phone', ['a', 'a', 'a', 'a']) # 삽입
+
+print(df)
