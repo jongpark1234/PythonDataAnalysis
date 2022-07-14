@@ -1,4 +1,5 @@
 import requests as req
+from bs4 import BeautifulSoup
 
 def get_html(url):
     res = req.get(url)
@@ -8,4 +9,5 @@ def get_html(url):
         return None
 url = 'https://comic.naver.com/webtoon/list?titleId=757904'
 html = get_html(url)
-print(html)
+soup = BeautifulSoup(html, 'html.parser')
+print(soup)
